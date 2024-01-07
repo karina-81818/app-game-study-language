@@ -1,0 +1,21 @@
+.container-tablePage{
+    margin: 30px;
+}
+.title-tablePage{
+    display: flex;
+    color:black;
+    font-size: large;
+}
+.td-tablePage{
+    width: 170px;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    border-collapse: collapse;
+    background-color: pink;
+    text-transform: uppercase;
+}
+.id-tablePage{
+    width: 50px;
+}

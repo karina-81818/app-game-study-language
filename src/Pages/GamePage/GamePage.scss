@@ -1,0 +1,13 @@
+.slider-game{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding: 70px;
+}
+.btnPrevGame, .btnNextGame{
+    border: none;
+    background-color: #abbfe4;
+    color: #f17a84;
+    cursor: pointer;
+    
+}

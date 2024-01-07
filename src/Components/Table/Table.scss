@@ -1,0 +1,55 @@
+.container-table{
+    display: flex;
+    font-size: 15px;
+    color: gray;
+   
+}
+.id-table{
+    width: 50px;
+}
+.td-table{
+    width: 170px;
+    border: 1px solid gray;
+    text-align: center;
+    padding: 10px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    border-collapse: collapse;
+    background-color: #f4f3f3;
+}
+.btnContainer-table{
+    display: flex;
+    justify-content: center;
+    color: gray;
+    
+}
+.save-table{
+    background-color: green;
+    border: none;
+    margin: 3px;
+    border-radius: 25%;
+    cursor: pointer;
+}
+.edit-table{
+    background-color: yellow;
+    border: none;
+    margin: 3px;
+    border-radius: 25%;
+    cursor: pointer;
+}
+.cancel-table{
+    background-color: orange;
+    border: none;
+    margin: 3px;
+    border-radius: 25%;
+    cursor: pointer;
+}
+.del-table{
+    background-color: red;
+    border: none;
+    margin: 3px;
+    border-radius: 25%;
+    cursor: pointer;
+}
+.id-table{
+    width: 50px;
+}
