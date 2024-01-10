@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react'
-import './Slider.scss'
+import { useEffect, useState, useRef } from 'react'
+import styles from './Slider.module.scss'
 
 export default function Slider(props) {
-  const [pressed, setPressed] = useState(false);
+  const [pressed, setPressed] = useState(true);
   const [count, setCount] = useState(0);
+  const btnElem = useRef(false);
   
   const handleClickedState = ()=>{
     setPressed(!pressed);
@@ -14,19 +15,20 @@ export default function Slider(props) {
   }
 
   useEffect(()=>{
-    setPressed(true)
+    setPressed(true);
+    btnElem?.current?.focus()
   }, [props])
   
     return (
-    <div className="container-slider" {...props}>
-      <div className="english-slider">{props.english}</div>
-      <div className='transcription-slider'>{props.transcription}</div>
-      <div className='btnElem-slider' onClick={handleClickedState}>
-      {pressed 
-      ?<button onClick={editCount} className='btnCheck-slider'>Показать перевод</button>
-      :<p className='russian-slider'>{props.russian}</p>
+    <div className={styles.container} {...props}>
+      <div className={styles.english}>{props.english}</div>
+      <div className={styles.transcription}>{props.transcription}</div>
+      <div className={styles.btnElem} onClick={handleClickedState}>
+       {pressed 
+      ?<button ref={btnElem} onClick={editCount} className={styles.btnCheck}>Показать перевод</button>
+      :<p className={styles.russian}>{props.russian}</p>
       }</div>
-      <p className='count-slider'>Изучено новых слов: {count}</p>
+      <p className={styles.count}>Изучено новых слов: {count}</p>
     </div>
     )
 }

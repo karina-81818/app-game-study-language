@@ -1,12 +1,12 @@
-.container-tablePage{
+.container{
     margin: 30px;
 }
-.title-tablePage{
+.title{
     display: flex;
     color:black;
     font-size: large;
 }
-.td-tablePage{
+.td{
     width: 170px;
     border: 1px solid gray;
     text-align: center;
@@ -16,6 +16,6 @@
     background-color: pink;
     text-transform: uppercase;
 }
-.id-tablePage{
+.id{
     width: 50px;
 }

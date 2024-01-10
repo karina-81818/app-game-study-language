@@ -1,34 +1,31 @@
 import React from 'react';
-import { useState, useEffect, useRef } from 'react';
-import './Table.scss'
+import { useState } from 'react';
+import styles from './Table.module.scss'
 
 function Table(props) {
     const [edited, setEdit] = useState(false);
-    const btnElem = useRef(false);
+   
     const handleEditState = ()=>{
         setEdit(true)
     }
     const handleCancelState = ()=>{
         setEdit(false)
     }
-    useEffect(()=>{
-        btnElem.current.focus()
-      }, [])
     
     return ( 
-        <div className='container-table'{...props}>
-            <div className='td-table id-table'>{props.id}</div>
-            <div className='td-table'>{edited
+        <div className={styles.container}{...props}>
+            <div className={`${styles.td} ${styles.id}`}>{props.id}</div>
+            <div className={styles.td}>{edited
             ?<input type="text" />:props.english}</div>
-            <div className='td-table'>{edited
+            <div className={styles.td}>{edited
             ?<input type="text" />:props.transcription}</div>
-            <div className='td-table'>{edited
+            <div className={styles.td}>{edited
             ?<input type="text" />:props.russian}</div>
-            <div className='td-table btnContainer-table btn-title'>
-            <button ref={btnElem} className="edit-table" onClick={handleEditState}><span className="material-symbols-outlined">edit</span></button>
-            <button className="cancel-table" onClick={handleCancelState}><span className="material-symbols-outlined">cancel</span></button>
-            <button className="save-table"><span className="material-symbols-outlined">save_as</span></button>
-            <button className="del-table"><span className="material-symbols-outlined">delete</span></button>
+            <div className={`${styles.td} ${styles.btnContainer}`}>
+            <button className={styles.edit} onClick={handleEditState}><span className='material-symbols-outlined'>edit</span></button>
+            <button className={styles.cancel} onClick={handleCancelState}><span className='material-symbols-outlined'>cancel</span></button>
+            <button className={styles.save}><span className='material-symbols-outlined'>save_as</span></button>
+            <button className={styles.del}><span className='material-symbols-outlined'>delete</span></button>
             </div>  
         </div>
             );

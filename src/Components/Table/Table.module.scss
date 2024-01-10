@@ -1,13 +1,12 @@
-.container-table{
+.container{
     display: flex;
     font-size: 15px;
     color: gray;
-   
 }
-.id-table{
+.id{
     width: 50px;
 }
-.td-table{
+.td{
     width: 170px;
     border: 1px solid gray;
     text-align: center;
@@ -16,40 +15,40 @@
     border-collapse: collapse;
     background-color: #f4f3f3;
 }
-.btnContainer-table{
+.btnContainer{
     display: flex;
     justify-content: center;
     color: gray;
     
 }
-.save-table{
+.save{
     background-color: green;
     border: none;
     margin: 3px;
     border-radius: 25%;
     cursor: pointer;
 }
-.edit-table{
+.edit{
     background-color: yellow;
     border: none;
     margin: 3px;
     border-radius: 25%;
     cursor: pointer;
 }
-.cancel-table{
+.cancel{
     background-color: orange;
     border: none;
     margin: 3px;
     border-radius: 25%;
     cursor: pointer;
 }
-.del-table{
+.del{
     background-color: red;
     border: none;
     margin: 3px;
     border-radius: 25%;
     cursor: pointer;
 }
-.id-table{
+.id{
     width: 50px;
 }

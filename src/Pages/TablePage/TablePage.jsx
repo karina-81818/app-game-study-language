@@ -1,18 +1,15 @@
-import { useState } from "react"
 import Table from '../../Components/Table/Table';
-import './TablePage.scss'
+import styles from './TablePage.module.scss'
 
 export default function TablePage({ stateWords }) {
-    
-    const [countTable, setCountTable] = useState(0);
     return (
-         <div className="container-tablePage">
-         <div className='title-tablePage'>
-            <div className='td-tablePage id-tablePage'>#</div>
-            <div className="td-tablePage">english</div>
-            <div className='td-tablePage'>transcription</div>
-            <div className='td-tablePage'>russian</div>
-            <div className='td-tablePage'></div>
+         <div className={styles.container}>
+         <div className={styles.title}>
+            <div className={`${styles.td} ${styles.id}`}>#</div>
+            <div className={styles.td}>english</div>
+            <div className={styles.td}>transcription</div>
+            <div className={styles.td}>russian</div>
+            <div className={styles.td}></div>
         </div>
             { stateWords.words.map((item)=>{
                 return(

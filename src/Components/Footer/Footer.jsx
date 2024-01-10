@@ -1,8 +1,8 @@
-import './Footer.scss'
+import styles from './Footer.module.scss'
 
 function Footer() {
     return (
-        <div className='container_footer'>
+        <div className={styles.container}>
             Учиться полезно!
         </div>
     );

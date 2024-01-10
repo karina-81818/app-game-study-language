@@ -1,4 +1,4 @@
-.container-slider{
+.container{
     text-align: center;
     width: 320px;
     height: 200px;
@@ -8,23 +8,22 @@
     font-family: ui-sans-serif, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8%;
-
 }
-.english-slider{
+.english{
     color: black;
     font-weight: bold;
     font-size: 28px;
 }
-.transcription-slider{
+.transcription{
     color: gray;
     font-size: 14px;
     padding: 15px;
 }
-.russian-slider{
+.russian{
     color: #14a456;
     font-size: 15px;
 }
-.btnCheck-slider{
+.btnCheck{
     margin: 10px;
     background-color: #14a456;
     border-radius:15px;
@@ -34,10 +33,7 @@
     font-size: 15px;
     cursor: pointer;
 }
-.count-slider{
+.count{
     color: black;
     font-size: 14px;
-}
-.btnCheck-slider:focus{
-    border: 1px solid black;
 }

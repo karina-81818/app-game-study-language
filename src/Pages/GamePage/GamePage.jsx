@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Slider from "../../Components/Slider/Slider";
-import './GamePage.scss'
+import styles from './GamePage.module.scss'
 
 export default function GamePage({ stateWords }) {
     let [countSlider, setCountSlider] = useState(0);
@@ -22,11 +22,11 @@ export default function GamePage({ stateWords }) {
     }
     
     return (
-        <div className="slider-game">
-            <button className="btnPrevGame" onClick={prevSlider}><span className="material-symbols-outlined">
+        <div className={styles.slider}>
+            <button className={styles.btnPrevGame} onClick={prevSlider}><span className="material-symbols-outlined">
 arrow_back_ios</span></button>
             <Slider {...stateWords.words[countSlider]} />
-            <button className="btnNextGame" onClick={nextSlider}><span className="material-symbols-outlined">
+            <button className={styles.btnNextGame} onClick={nextSlider}><span className="material-symbols-outlined">
 arrow_forward_ios</span></button>
         </div>
     );
