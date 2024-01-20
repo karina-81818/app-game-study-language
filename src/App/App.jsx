@@ -11,7 +11,7 @@ import '../style/App.scss'
 
 function App() {
   const [words, setWords] = useState( () => wordsJson || false);
-  const stateWords = { words, setWords };
+  /*const stateWords = { words, setWords };*/
 
   if(!words){
     return <Spinner />
@@ -23,8 +23,8 @@ function App() {
      <Header />
         <Routes>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/game" element={<GamePage stateWords={stateWords} />}/>
-          <Route path="/table" element={<TablePage stateWords={stateWords} />}/>
+          <Route path="/game" element={<GamePage words={words} setWords={setWords} />}/>
+          <Route path="/table" element={<TablePage words={words} setWords={setWords} />}/>
           <Route path="*" element={<ErrorPage />}/>
         </Routes>
      <Footer />
