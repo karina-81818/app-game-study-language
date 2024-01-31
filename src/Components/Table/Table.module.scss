@@ -51,7 +51,7 @@
     color: gray;
     background-color:#f4f3f3; 
 }
-input{
+.input{
     border: none;
     text-align: center;
     padding: 5px;
@@ -70,4 +70,14 @@ input:valid {
 .error{
     color: red;
     font-size: 9px;
+}
+.btnCheck{
+    margin: 10px;
+    background-color: #14a456;
+    border-radius:15px;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
 }

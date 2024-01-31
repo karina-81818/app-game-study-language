@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+
+import { useState, useEffect, useContext } from 'react';
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { HomePage, ErrorPage, GamePage, TablePage } from '../Pages';
@@ -10,12 +11,12 @@ import wordsJson from '../data/words.json';
 import '../style/App.scss'
 
 function App() {
-  const [words, setWords] = useState( () => wordsJson || false);
-  /*const stateWords = { words, setWords };*/
+  /*const [words, setWords] = useState(()=>wordsJson|| false)
+  const stateWords ={words, setWords}
 
   if(!words){
-    return <Spinner />
-  }
+    return <Spinner/>
+  }*/
   
   return (
     <Router>
@@ -23,8 +24,8 @@ function App() {
      <Header />
         <Routes>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/game" element={<GamePage words={words} setWords={setWords} />}/>
-          <Route path="/table" element={<TablePage words={words} setWords={setWords} />}/>
+          <Route path="/game" element={<GamePage />}/>
+          <Route path="/table" element={<TablePage />}/>
           <Route path="*" element={<ErrorPage />}/>
         </Routes>
      <Footer />

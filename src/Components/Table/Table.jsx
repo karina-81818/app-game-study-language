@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './Table.module.scss'
 
-
 export default function Table({english, transcription, russian, id, editRowUsers}) {
     const [edited, setEdit] = useState(true);
     const [englishInput, setEnglishInput] = useState('');
@@ -25,7 +24,7 @@ export default function Table({english, transcription, russian, id, editRowUsers
         }else{
             setFormValid(true) 
         }
-    }, [englishInput, transcriptionInput, russianInput])
+    }, [englishInput, transcriptionInput, russianInput]);
 
     const englishHandler = (e) =>{
         setEnglishInput(e.target.value);
@@ -66,7 +65,7 @@ export default function Table({english, transcription, russian, id, editRowUsers
             setRusError('')
         }
     }
-    
+   
     return ( 
         <div >
             {edited ? (
@@ -84,15 +83,15 @@ export default function Table({english, transcription, russian, id, editRowUsers
                 <div className={styles.row}>
                     <div className={styles.td}>
                         {englishError && <div className={styles.error}>{englishError}</div>}
-                        <input onChange={e=>englishHandler(e)} name='english' type="text" required value={englishInput}  />
+                        <input className={styles.input} onChange={e=>englishHandler(e)} name='english' type="text" required value={englishInput}  />
                     </div>
                     <div className={styles.td}>
                         {transError && <div className={styles.error}>{transError}</div>}
-                        <input name='transcription' type="text" required value={transcriptionInput} onChange={e=>transcriptionHandler(e)} />
+                        <input className={styles.input} name='transcription' type="text" required value={transcriptionInput} onChange={e=>transcriptionHandler(e)} />
                     </div>
                     <div className={styles.td}>
                        {rusError && <div className={styles.error}>{rusError}</div>}
-                        <input  name='russian' type="text" required value={russianInput} onChange={e=>russianHandler(e)} />
+                        <input className={styles.input} name='russian' type="text" required value={russianInput} onChange={e=>russianHandler(e)} />
                     </div>
                     <div className={styles.btnContainer}> 
                     <button onClick={()=>setEdit(true)}><span className='material-symbols-outlined'>cancel</span></button>
@@ -106,5 +105,6 @@ export default function Table({english, transcription, russian, id, editRowUsers
                 </div>)
             }
      </div>
+     
     )
 }

@@ -1,8 +1,11 @@
+import { MyContext } from '../../Context/MyContext'
+import { useContext} from 'react';
 import { useState } from "react";
 import Slider from "../../Components/Slider/Slider";
 import styles from './GamePage.module.scss'
 
-export default function GamePage({ words, setWords }) {
+export default function GamePage() {
+    const {words} = useContext(MyContext)
     let [countSlider, setCountSlider] = useState(0);
     const [click, setClick] = useState(true);
     
