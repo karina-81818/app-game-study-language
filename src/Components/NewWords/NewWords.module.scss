@@ -1,0 +1,51 @@
+.row{
+    display: flex;
+    justify-content: space-around;
+    background-color:#f4f3f3; 
+}
+.input{
+    text-align: center;
+    padding: 5px;
+    background-color:#f4f3f3;
+    color: green;
+}
+.td{
+    width: 170px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    border-collapse: collapse;
+    background-color: #f4f3f3;
+    padding: 8px;
+}
+
+.btnContainer{
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    border: 1px solid gray;
+}
+
+.btn{
+    margin: 10px;
+    background-color: #14a456;
+    border-radius:15px;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+input:invalid {
+    border: 2px dashed red;
+} 
+input:valid {
+    border: 2px solid black;
+}
+.error{
+    color: red;
+    font-size: 9px;
+}
