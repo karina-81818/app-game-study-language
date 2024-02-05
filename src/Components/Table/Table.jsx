@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './Table.module.scss'
 
-export default function Table({english, transcription, russian, id, editRowUsers}) {
+export default function Table({english, transcription, russian, id, editRowUsers, deleteItem}) {
     const [edited, setEdit] = useState(true);
     const [englishInput, setEnglishInput] = useState('');
     const [transcriptionInput, setTranscriptionInput] = useState('');
@@ -76,6 +76,9 @@ export default function Table({english, transcription, russian, id, editRowUsers
                     <div className={styles.btnContainer} >
                     <button
                     onClick={()=>setEdit(false)}><span className='material-symbols-outlined'>edit</span>
+                    </button>
+                    <button
+                    onClick={()=>{deleteItem(id)}}><span className='material-symbols-outlined'>delete</span>
                     </button>
                     </div>
                 </div>

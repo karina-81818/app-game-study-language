@@ -11,7 +11,6 @@ export default function NewWords() {
     const [transcription, setTranscription] = useState('');
     const [russian, setRussian] = useState('');
     
-
     useEffect(()=>{
         getWordsServer();
     }, [])
@@ -35,7 +34,7 @@ export default function NewWords() {
 }
 
     return (
-        <div >
+        <div id="item${id}">
             <form className={styles.row}>
                 <div className={styles.td}>
                 <input className={styles.input} type="text"
@@ -64,7 +63,6 @@ export default function NewWords() {
             <button className={styles.btn}  
             onClick={addPostServer}>Добавить новое слово</button>
         </div>
-        
     );
 }
 
